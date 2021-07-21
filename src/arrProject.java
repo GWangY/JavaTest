@@ -34,7 +34,6 @@ public class arrProject {
         	}
         	System.out.println();
         }
-       
         System.out.println("行列调换后输出：");
         for(int i=0;i<a1.length;i++) {
         	for(int j=0;j<a1.length;j++) {
