@@ -1,3 +1,4 @@
+import java.util.Date;
 
 public class TestString {
 
@@ -34,11 +35,29 @@ public class TestString {
 		String str6=str5.substring(0,3);
 		System.out.println(str6);
 		
-		//去掉空格 trim()
+		//去掉空格 trim() 只去掉字符串前面空格和尾部空格
 		String str7 =" java class  ";
 		System.out.println("原来的字符串："+str7);
 		System.out.println("去掉空格之后的字符串："+str7.trim());
 		
+		//字符串的替换 str.replace(char oldChar,char newChar)
+		//字符串的分割 str.split(string sign,int limit)
+		String str8="192.168.0.1";
+		String[] firstArry=str8.split("\\.");
+		String[] secondArry=str8.split("\\.",2);
+		System.out.println("全部分割输出结果：");
+		for(String a:firstArry) {
+			System.out.print("["+a+"]");
+		}
+		System.out.print("\n");
+		System.out.println("两次分割输出结果：");
+		for(String b:secondArry) {
+			System.out.print("["+b+"]");
+		}
+		System.out.println("");
+		Date date= new Date();
+		String str9=String.format("%te",date);
+		System.out.println(str9);
 	}
 
 }
